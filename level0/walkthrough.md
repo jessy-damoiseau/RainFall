@@ -1,5 +1,5 @@
 ## 1 - Clone executable file :
-```sh
+```bash
 scp -P 4242 level0@<Target_IP>:level0 .
 ```
 
