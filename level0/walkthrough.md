@@ -18,7 +18,7 @@ execv("/bin/sh",&local_20);
 These lines let us open a new shell as the next user (here, level1).
 
 But before accessing it, there is a check :
-```c
+```cb
 if (iVar1 == 423)
 {...}
 ```
