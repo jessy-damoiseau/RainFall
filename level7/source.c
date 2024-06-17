@@ -13,24 +13,23 @@ int m() {
 }
 
 int main(int argc, const char **argv, const char **envp) {
+    int *buffer1;
+    int *buffer2;
     FILE *file;
-    void *buffer1;
-    void *buffer2;
 
-    buffer1 = malloc(8);
-    *((int *)buffer1) = 1;
-    *((void **)buffer1 + 1) = malloc(8);
+    buffer1 = (int *)malloc(8);
+    buffer1[0] = 1;
+    buffer1[1] = (int)malloc(8);
 
-    buffer2 = malloc(8);
-    *((int *)buffer2) = 2;
-    *((void **)buffer2 + 1) = malloc(8);
+    buffer2 = (int *)malloc(8);
+    buffer2[0] = 2;
+    buffer2[1] = (int)malloc(8);
 
-    strcpy(*((char **)buffer1 + 1), argv[1]);
-    strcpy(*((char **)buffer2 + 1), argv[2]);
+    strcpy((char *)buffer1[1], argv[1]);
+    strcpy((char *)buffer2[1], argv[2]);
 
     file = fopen("/home/user/level8/.pass", "r");
     fgets(c, sizeof(c), file);
-    fclose(file);
     puts("~~");
 
     return 0;
