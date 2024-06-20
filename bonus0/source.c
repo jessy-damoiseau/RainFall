@@ -12,8 +12,8 @@ void p(char *str1, char *str2) {
 }
 
 void pp(char *str1) {
-    char buffer1[80];
-    char buffer2[80];
+    char buffer1[20];
+    char buffer2[20];
     p(buffer1, " - ");
     p(buffer2, " - ");
     strcpy(str1, buffer1);
@@ -22,7 +22,7 @@ void pp(char *str1) {
 }
 
 int main() {
-    char str1[64];
+    char str1[42];
     pp(str1);
     puts(str1);
     return 0;
