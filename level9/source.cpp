@@ -21,7 +21,7 @@ class N{
 };
 
 int main(int ac , char **av){
-    if (ac > 1){
+    if (ac < 1){
         N *var1 = new N(5);
         N *var2 = new N(6);
         int ret;
